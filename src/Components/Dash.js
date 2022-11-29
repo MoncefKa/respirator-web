@@ -1,13 +1,13 @@
 import "react-toastify/dist/ReactToastify.css";
-import React, { useState } from "react";
+import SideBar from "./SideBar";
+import React from "react";
 
 function Dash() {
+  return (
+    <div>
+      <SideBar />
+    </div>
+  );
+}
 
-    return (
-        <div>
-            <p>oussama</p>
-        </div>
-    );
-  }
-  
-  export default Dash;
+export default Dash;
