@@ -64,10 +64,10 @@ const Sidebar = () => {
             </Link>
             
           ))}
-          <li>
+          <li >
 
           <img
-            class="w-12 h-12 ml-2 my-80 self-end rounded-full"
+            class="w-12 h-12 ml-2 my-64 rounded-full"
             src={mehdi}
           />
 
