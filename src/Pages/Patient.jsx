@@ -5,7 +5,7 @@ import health from "../assets/images/hosp.gif";
 const Patient = () => {
     return (
     <div>
-        <div className="w-full">
+        <div className="w-full ">
             <div className="h-54 dark:bg-slate-800 rounded">
                 <div className="flex justify-between items-center">
                     <h1 className="text-[#EFF5F5] text-2xl p-8">
@@ -15,7 +15,7 @@ const Patient = () => {
                 </div>
             </div>
         </div>
-        <PatientGlob/>
+        <PatientGlob />
     </div>
     );
 }
