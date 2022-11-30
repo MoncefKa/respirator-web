@@ -3,6 +3,7 @@ import health from "../assets/images/hosp.gif";
 
 const Home = () => {
     return(
+        
         <div className="w-full">
             <div className="h-54 dark:bg-slate-800 rounded">
                 <div className="flex justify-between items-center">
