@@ -1,7 +1,10 @@
 import React from 'react'
+import PatientGlob from '../Components/PatientGlob'
 
 const Patient = () => {
-    return <div></div>
+    return <div>
+        <PatientGlob/>
+    </div>
 }
 
 export default Patient
