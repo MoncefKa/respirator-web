@@ -9,8 +9,8 @@ import { BiGroup } from "react-icons/bi";
 import Logo from "../assets/images/logo.png";
 
 const Sidebar = () => {
-  const [open, setOpen] = useState(false);
-  const location = useLocation();
+    const [open, setOpen] = useState(false);
+    const location = useLocation();
 
   const Menus = [
     { title: "Home", path: "/", src: <BiHome /> },
@@ -64,19 +64,17 @@ const Sidebar = () => {
             </Link>
             
           ))}
-          <li >
+          <li>
 
           <img
-            class="w-12 h-12 ml-2 my-64 rounded-full"
+            class="w-12 h-12 ml-2 my-80 self-end rounded-full"
             src={mehdi}
           />
 
-          </li>
-        </ul>
-
-      </div>
-    </>
-  );
+            </div>
+            
+        </>
+    );
 };
 
 export default Sidebar;
