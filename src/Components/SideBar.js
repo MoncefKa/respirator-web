@@ -13,7 +13,7 @@ const Sidebar = () => {
 
     const Menus = [
         { title: 'Home', path: '/dashboard', src: <BiHome /> },
-        { title: 'Patients', path: '/course', src: <BiGroup /> },
+        { title: 'Patients', path: '/patient', src: <BiGroup /> },
         
         { title: 'Log Out', path: '/login', src: <TbLogout />, gap: 'true' },
     ]
@@ -35,8 +35,8 @@ const Sidebar = () => {
                     <div className={`flex ${open && 'gap-x-4'} items-center`}>
                         <img src={Logo} alt='' className=' w-30 h-20' />
                         {open && (
-                            <span className='text-xl font-medium whitespace-nowrap dark:text-white'>
-                                Fab Lab
+                            <span className='text-xl font-medium whitespace-nowrap dark:text-white uppercase'>
+                                FabLab
                             </span>
                         )}
                     </div>

@@ -1,20 +1,15 @@
-import React from 'react'
-
+import React,{useState} from 'react';
+import { matchPath } from 'react-router-dom';
 const Navbar = () => {
+    let name="{ dashboard }"
     return (
-        <nav className='bg-white border-gray-200 mx-2 px-2 py-2.5 rounded dark:bg-gray-800'>
-            <div className='container flex justify-between items-center mx-auto'>
-                <div className='flex items-center mx-auto'>
-                    <span className='text-xl font-medium whitespace-nowrap dark:text-white'>
-                        Welcome
-                    </span>
-                </div>
-
-                <div className='flex justify-end pr-4 pt-4'>
-                   
-                </div>
+        <div className="dark:border-gray-600 dark:bg-slate-800 w-full p-16">
+            <div className="w-auto h-full text-center capitalize flex items-center justify-around">
+                <h1 className="text-[#EFF5F5] text-3xl font-semibold">
+                    welcome to your <span className="text-[#00E7FF] uppercase font-bold">{name}</span>
+                </h1>
             </div>
-        </nav>
+        </div>
     )
 }
 
