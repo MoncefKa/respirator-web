@@ -1,15 +1,18 @@
 import React from 'react'
 import Numpatients from '../Components/Numpatients';
 import Numappa from '../Components/Numappa';
-import Activeapp from '../Components/Activeapp';
+import Activeapp from '../Components/Activeapp';import health from "../assets/images/hosp.gif";
+
 const Home = () => {
     return(
+        
         <div className="w-full overflow-hidden">
-            <div className="h-44 dark:bg-slate-800 rounded">
-                <div className="h-full flex justify-between items-center">
+            <div className="h-54 dark:bg-slate-800 rounded">
+                <div className="flex justify-between items-center">
                     <h1 className="text-[#EFF5F5] text-2xl p-8">
                         General Information
                     </h1>
+                    <img className="w-2/6 h-48" src={health} alt="health"/>
                 </div>
             </div>
             <div class="grid grid-cols-2 grid-rows-2 gap-2 p-12">

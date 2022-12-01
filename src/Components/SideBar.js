@@ -24,9 +24,9 @@ const Sidebar = () => {
         setOpen(false);
     };
     return (
-        <>
+        <div className="overflow-hidden">
             <div
-                className={`${open ? "w-30 h-full" : "w-fit h-full"
+                className={`${open ? "w-30" : "w-fit"
                     } hidden sm:block relative h-screen duration-300 bg-gray-100 border-r border-gray-200 dark:border-gray-600 p-3 dark:bg-slate-800`}
                 onMouseOver={openSide}
                 onMouseLeave={closeSide}
@@ -41,7 +41,7 @@ const Sidebar = () => {
                         )}
                     </div>
                 </Link>
-            <div className=" h-full block">
+            <div className="h-full">
                 <ul className="pt-6">
                     {Menus.map((menu, index) => (
                         <Link to={menu.path} key={index}>
@@ -64,14 +64,13 @@ const Sidebar = () => {
                 </ul>
             </div>
                 <img
-                    className="w-12 h-12 -my-28 rounded-full"
+                    className="w-12 h-12 ml-2 -my-28 rounded-full"
                     src={mehdi}
                     alt="mehdi"
                         />
 
             </div>
-            
-        </>
+        </div>
     );
 };
 
