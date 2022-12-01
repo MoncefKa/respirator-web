@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import mehdi from "../assets/images/patient1.jpeg";
 
-import { BsArrowLeftCircle } from "react-icons/bs";
+
 import { BiHome } from "react-icons/bi";
 import { TbLogout } from "react-icons/tb";
 import { BiGroup } from "react-icons/bi";
@@ -13,7 +13,7 @@ const Sidebar = () => {
     const location = useLocation();
 
     const Menus = [
-        { title: "Home", path: "/", src: <BiHome /> },
+        { title: "Dashboard", path: "/Dashboard", src: <BiHome /> },
         { title: "Patients", path: "/Patient", src: <BiGroup /> },
         { title: "LOGOUT", path: "/login", src: <TbLogout />, gap: "true" },
     ];
@@ -64,7 +64,7 @@ const Sidebar = () => {
                 </ul>
             </div>
                 <img
-                    className="w-12 h-12 -my-28 rounded-full"
+                    className="w-12 h-12 ml-2 -my-28 rounded-full"
                     src={mehdi}
                     alt="mehdi"
                         />
