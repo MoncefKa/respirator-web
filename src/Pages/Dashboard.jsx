@@ -1,7 +1,8 @@
 import React from 'react'
 import Numpatients from '../Components/Numpatients';
 import Numappa from '../Components/Numappa';
-import Activeapp from '../Components/Activeapp'
+import Activeapp from '../Components/Activeapp';
+
 const Dashboard = () => {
     return(
         <div className="w-full overflow-hidden">
