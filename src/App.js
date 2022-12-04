@@ -8,18 +8,21 @@ import Login from "./Pages/Login.jsx";
 import Layout from "./Components/Layout.js";
 
 function App() {
+  const Homee = ({children}) =>   <Routes>
+  <Route path="/" element={<Home/>} />
+</Routes>;
   return (
     <Router>
-    <Routes>
-      <Route path="/" element={<Home/>} />
-    </Routes>
-      <Layout>
-      <Routes>
-        <Route path="/Dashboard" element={<Dashboard/>} />
-        <Route path="/Patient" element={<Patient/>} />
-        <Route path="/login" element={<Login/>} />
-      </Routes>
+    <Layout>
+      <Homee>
+          <Routes>
+            <Route path="/Dashboard" element={<Dashboard/>} />
+            <Route path="/Patient" element={<Patient/>} />
+            <Route path="/login" element={<Login/>} />
+          </Routes>
+            </Homee>
       </Layout>
+  
     </Router>
   );
 }
