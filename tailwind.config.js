@@ -3,7 +3,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '90': "20rem",
+        '128': '32rem',
+        '144': '50rem',
+      }
+    },
   },
   plugins: [
     require('tailwind-scrollbar')({ nocompatible: true }),
