@@ -2,9 +2,10 @@ import React from 'react'
 import Numpatients from '../Components/Numpatients';
 import Numappa from '../Components/Numappa';
 import Activeapp from '../Components/Activeapp';
-
+import Layout from '../Components/Layout';
 const Dashboard = () => {
     return(
+        <Layout>
         <div className="w-full overflow-hidden">
         <div className="h-54 dark:bg-slate-800 rounded">
             <div className="flex justify-between items-center">
@@ -21,6 +22,7 @@ const Dashboard = () => {
         </div>
 
     </div>
+    </Layout>
     );
 }
 
