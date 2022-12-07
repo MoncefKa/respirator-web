@@ -1,10 +1,10 @@
 import React from 'react';
-import Terms_conditions from '../Components/Terms_conditions'
+import Btn_support from '../Components/Btn_support'
 
 
 const Setting = () => {
     return <div>
-        <Terms_conditions />
+        <Btn_support />
     </div>
 }
 

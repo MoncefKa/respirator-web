@@ -40,7 +40,7 @@ function Loginform() {
 
             <div>
               <button
-                className=" text-cente rounded-full transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:drop-shadow-xl  bg-gradient-to-r from-[#81C6E8] via-[#39A2DB]  to-[#81C6E8]  inline-block px-6 py-2.5 text-[#FFFFFF] font-semibold text-xs leading-tight   ease-in-out w-full  mt-2"
+                className=" text-center rounded-full transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:drop-shadow-xl  bg-gradient-to-r from-[#81C6E8] via-[#39A2DB]  to-[#81C6E8]  inline-block px-6 py-2.5 text-[#FFFFFF] font-semibold text-xs leading-tight   ease-in-out w-full  mt-2"
                 type="submit"
               >
                 Submit

@@ -1,17 +1,50 @@
-import React from "react";
-
-export default function Terms_conditions() {
+import React, {useState} from 'react';
+import {BsChatDots} from 'react-icons/bs';
+  
+import styled from 'styled-components';
+  
+export const Heading = styled.h1`
+   text-align: right;
+   color: rgb(2,136,209);
+`;
+  
+export const Content = styled.div`
+   overflowY: scroll;
+   height: 2500px;
+`;
+  
+export const Button = styled.div`
+   position: fixed; 
+   width: 100%;
+   left: 93%;
+   bottom: 60px;
+   height: 30px;
+   font-size: 3rem;
+   z-index: 1;
+   cursor: pointer;
+   color: rgb(115,216,255);
+`
+export default function Btn_support() {
   const [showModal, setShowModal] = React.useState(false);
   
   return (
     <>
-      <button
+      {/* <button
         className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button"
         onClick={() => setShowModal(true)}
       >
         Contact Us
-      </button>
+      </button> */}
+
+<Button>
+  <BsChatDots  
+  
+  onClick={() => setShowModal(true)}>
+
+  </BsChatDots>
+</Button>
+
       {showModal ? (
         <>
           <div

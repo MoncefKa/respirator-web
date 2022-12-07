@@ -5,19 +5,20 @@ import Home from "./Pages/Home.jsx";
 import Setting from "./Pages/Setting.jsx";
 import Patient from "./Pages/Patient";
 import Login from "./Pages/Login.jsx";
-import Layout from "./Components/Layout.js";
+import Dashboard from "./Pages/Dashboard.jsx";
+
 
 function App() {
   return (
     <Router>
-      <Layout>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/Setting" element={<Setting/>} />
-        <Route path="/Patient" element={<Patient/>} />
-        <Route path="/login" element={<Login/>} />
-      </Routes>
-      </Layout>
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/Dashboard" element={<Dashboard/>} />
+            <Route path="/Setting" element={<Setting/>} />
+            <Route path="/Patient" element={<Patient/>} />
+            <Route path="/login" element={<Login/>} />
+          </Routes>
+      
     </Router>
   );
 }
