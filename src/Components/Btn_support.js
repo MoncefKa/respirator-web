@@ -1,28 +1,22 @@
 import React, {useState} from 'react';
-import {BsChatDots} from 'react-icons/bs';
+import {BsFillChatSquareDotsFill} from 'react-icons/bs';
   
 import styled from 'styled-components';
   
-export const Heading = styled.h1`
-   text-align: right;
-   color: rgb(2,136,209);
-`;
+
   
-export const Content = styled.div`
-   overflowY: scroll;
-   height: 2500px;
-`;
+
   
 export const Button = styled.div`
    position: fixed; 
    width: 100%;
-   left: 93%;
+   left: 95%;
    bottom: 60px;
    height: 30px;
    font-size: 3rem;
    z-index: 1;
    cursor: pointer;
-   color: rgb(115,216,255);
+   color: rgb(92 ,184, 228);
 `
 export default function Btn_support() {
   const [showModal, setShowModal] = React.useState(false);
@@ -38,11 +32,11 @@ export default function Btn_support() {
       </button> */}
 
 <Button>
-  <BsChatDots  
+  <BsFillChatSquareDotsFill  
   
   onClick={() => setShowModal(true)}>
 
-  </BsChatDots>
+  </BsFillChatSquareDotsFill>
 </Button>
 
       {showModal ? (
@@ -86,11 +80,11 @@ export default function Btn_support() {
                     Close
                   </button>
                   <button
-                    className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="bg-[#5CB8E4] text-white active:bg-[#009EFF] font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowModal(false)}
                   >
-                    Save Changes
+                    Contact Us
                   </button>
                 </div>
               </div>

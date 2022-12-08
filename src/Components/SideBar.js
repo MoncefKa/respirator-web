@@ -6,7 +6,6 @@ import mehdi from "../assets/images/patient1.jpeg";
 import { BiHome } from "react-icons/bi";
 import { TbLogout } from "react-icons/tb";
 import { BiGroup } from "react-icons/bi";
-import { RiUserSettingsLine } from "react-icons/ri";
 import Logo from "../assets/images/logo.png";
 
 const Sidebar = () => {
@@ -16,7 +15,6 @@ const Sidebar = () => {
   const Menus = [
     { title: "Home", path: "/Dashboard", src: <BiHome /> },
     { title: "Patients", path: "/Patient", src: <BiGroup /> },
-    { title: "Setting", path: "/Setting", src: <RiUserSettingsLine /> },
     { title: "LOGOUT", path: "/login", src: <TbLogout />, gap: "true" },
   ];
   const openSide = () => {
@@ -39,7 +37,7 @@ const Sidebar = () => {
             <img src={Logo} alt="" className=" w-16 h-16" />
             {open && (
               <span className="text-xl pr-4 font-medium whitespace-nowrap dark:text-white uppercase">
-                FabLab
+                RESFAB
               </span>
             )}
           </div>
@@ -68,11 +66,14 @@ const Sidebar = () => {
             ))}
           </ul>
         </div>
+        <div class="relative">
         <img
           className="w-12 h-12 ml-2 -my-28 rounded-full"
           src={mehdi}
           alt="mehdi"
         />
+        <span class="bottom-0 left-10 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+      </div>
       </div>
     </div>
   );
