@@ -3,6 +3,8 @@ import Numpatients from '../Components/Numpatients';
 import Numappa from '../Components/Numappa';
 import Activeapp from '../Components/Activeapp';
 import Layout from '../Components/Layout';
+import Btn_support from '../Components/Btn_support'
+
 const Dashboard = () => {
     return(
         <Layout>
@@ -22,6 +24,7 @@ const Dashboard = () => {
         </div>
 
     </div>
+    <Btn_support/>
     </Layout>
     );
 }

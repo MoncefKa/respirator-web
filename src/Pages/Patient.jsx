@@ -1,6 +1,8 @@
 import React from 'react'
 import PatientGlob from '../Components/PatientGlob'
 import Layout from '../Components/Layout'
+import Btn_support from '../Components/Btn_support'
+
 const Patient = () => {
     return (
     <Layout>
@@ -16,6 +18,7 @@ const Patient = () => {
         <PatientGlob />
     </div>
     </div>
+    <Btn_support/>
     </Layout>
     );
 }
