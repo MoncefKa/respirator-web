@@ -1,10 +1,14 @@
 const express = require('express');
 require("dotenv").config();
 require("./models/db");
+const approuter = require("./routes/ids");
 const app = express();
+
 app.use(express.json());
 
-app.listen(3001, () => {
+app.use(approuter);
+
+app.listen(3000, () => {
     console.log("listening!!");
   });
   app.get("/", (req, res) => {
