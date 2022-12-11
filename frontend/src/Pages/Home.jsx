@@ -1,10 +1,13 @@
-import React from 'react'
+import {React} from 'react'
+import {Link} from 'react-router-dom'
 import Logo from "../assets/images/logo.png";
 import Fab from "../assets/images/FAB.jpg";
 import helloch from "../assets/images/Perons/halima.jpg";
 import donttrust from "../assets/images/Perons/donttrustme.jfif";
-import model from "../assets/images/Perons/iwantmilf.jfif";
+import model from "../assets/images/Perons/model.jpeg";
 import mskhot from "../assets/images/Perons/mskhot.png";
+import mehdi from "../assets/images/patient1.jpeg";
+
 
 const Home = () => {
 
@@ -14,7 +17,7 @@ const Home = () => {
                 <nav className="flex items-center  justify-between flex-wrap p-2">
                     <div className="flex items-center flex-shrink-0 text-dark md:text-right mr-6">
                         <a href="/"><img src={Logo} alt="" className=" w-14 h-14 rounded-full bg-[#82C3EC]" /></a>
-                        <span className="font-semibold text-xl tracking-tight hover:text-[#5CB8E4] captetalize pl-4"><a href="/"><span className="text-[#6D67E4]">Lung-</span>Link</a></span>
+                        <span className="font-semibold text-xl tracking-tight hover:text-[#5CB8E4] captetalize pl-4"><a href="/"><span className="text-[#1988cd]">Lung-</span>Link</a></span>
                     </div>
                     <div id="nav-content" className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0  md:text-right">
                         <div className="text-xm lg:flex-grow">
@@ -27,7 +30,10 @@ const Home = () => {
                     <div className="container p-64 text-center mx-auto  opacity-100">
                         <h2 className="text-4xl font-bold mb-2 text-white uppercase">Lung Link</h2>
                         <h3 className="text-2xl mb-8 text-gray-200 capitalize">Save your lungs, Save your life before its to late</h3>
-                        <button className="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider hover:border-transparent hover:text-blue-500 hover:bg-gray-800 transition-all">access your dashboard </button>
+                        <Link to ="/Login">
+                        <button className="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider hover:border-transparent hover:text-white hover:bg-[#1988cd] transition-all">access your dashboard </button>
+                        </Link>
+                        
                     </div>
                 </div>
                 </div>
@@ -53,56 +59,67 @@ const Home = () => {
                     </div>
 
                 </section>
-                <div className="h-full bg-[#FEFCF3]">
+                <div className="h-full ">
                     <div>
                         <h1 className="text-4xl font-bold uppercase text-center">Our Team</h1>
                     </div>
                     <div className="h-full flex justify-between p-8">
-                        <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                        <div className="w-full max-w-sm  rounded-lg ">
                             <div className="flex justify-end px-4 pt-4">
                                 <div id="dropdown" className="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700">
                                 </div>
                             </div>
                             <div className="flex flex-col items-center pb-10">
                                 <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={helloch} alt="helloucha" />
-                                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Hatim Allouch</h5>
+                                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:gray-600">Hatim Allouch</h5>
                                 <span className="text-sm text-gray-500 dark:text-gray-400">front end dev</span>
                                 <div className="flex mt-4 space-x-3 md:mt-6">
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                        <div className="w-full max-w-sm rounded-lg ">
                             <div className="flex justify-end px-4 pt-4">
                             </div>
                             <div className="flex flex-col items-center pb-10">
                                 <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={donttrust} alt="dont" />
-                                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Karam Belmoujoud</h5>
+                                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:gray-600">Karam Belmoujoud</h5>
                                 <span className="text-sm text-gray-500 dark:text-gray-400">front end dev</span>
                                 <div className="flex mt-4 space-x-3 md:mt-6">
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                        <div className="w-full max-w-sm rounded-lg ">
+                            <div className="flex justify-end px-4 pt-4">
+                            </div>
+                            <div className="flex flex-col items-center pb-10">
+                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={mehdi} alt="dont" />
+                                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:gray-600">Elmehdi KIBBOU</h5>
+                                <span className="text-sm text-gray-500 dark:text-gray-400"></span>
+                                <div className="flex mt-4 space-x-3 md:mt-6">
+                                </div>
+                            </div>
+                        </div>
+                        <div className="w-full max-w-sm rounded-lg ">
                             <div className="flex justify-end px-4 pt-4">
                                 <div id="dropdown" className="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700">
                                 </div>
                             </div>
                             <div className="flex flex-col items-center pb-10">
                                 <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={model} alt="iwantmilf" />
-                                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Oussama Boussaid</h5>
+                                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:gray-600 ">Oussama Boussaid</h5>
                                 <span className="text-sm text-gray-500 dark:text-gray-400">front end dev</span>
                                 <div className="flex mt-4 space-x-3 md:mt-6">
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                        <div className="w-full max-w-sm  rounded-lg ">
                             <div className="flex justify-end px-4 pt-4">
                                 <div id="dropdown" className="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700">
                                 </div>
                             </div>
                             <div className="flex flex-col items-center pb-10">
                                 <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={mskhot} alt="mskhot" />
-                                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Moncef Karmaoui</h5>
+                                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:gray-600">Moncef Karmaoui</h5>
                                 <span className="text-sm text-gray-500 dark:text-gray-400">front end dev</span>
                                 <div className="flex mt-4 space-x-3 md:mt-6">
                                 </div>
