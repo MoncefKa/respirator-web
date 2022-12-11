@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
-import {BsFillChatSquareDotsFill} from 'react-icons/bs';
-  
+import React, { useState } from 'react';
+import { BsFillChatSquareDotsFill } from 'react-icons/bs';
+
 import styled from 'styled-components';
-  
 
-  
 
-  
+
+
+
 export const Button = styled.div`
    position: fixed; 
    width: 100%;
@@ -20,7 +20,7 @@ export const Button = styled.div`
 `
 export default function Btn_support() {
   const [showModal, setShowModal] = React.useState(false);
-  
+
   return (
     <>
       {/* <button
@@ -31,13 +31,13 @@ export default function Btn_support() {
         Contact Us
       </button> */}
 
-<Button>
-  <BsFillChatSquareDotsFill  
-  
-  onClick={() => setShowModal(true)}>
+      <Button>
+        <BsFillChatSquareDotsFill
 
-  </BsFillChatSquareDotsFill>
-</Button>
+          onClick={() => setShowModal(true)}>
+
+        </BsFillChatSquareDotsFill>
+      </Button>
 
       {showModal ? (
         <>
@@ -63,11 +63,8 @@ export default function Btn_support() {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                    oussama boussaid
-                    karam hatim 
-                    modhjfsdj
-                    
+                  <p className="my-4 text-slate-500 text-lg leading-relaxed capitalize">
+                    get help from our support regarding any questions
                   </p>
                 </div>
                 {/*footer*/}

@@ -34,10 +34,10 @@ const Sidebar = () => {
       >
         <Link to="/">
           <div className={`flex ${open && "gap-x-1"} items-center`}>
-            <img src={Logo} alt="" className=" w-16 h-16" />
+            <img src={Logo} alt="" className="w-16 h-16 fill-white"/>
             {open && (
-              <span className="text-xl pr-4 font-medium whitespace-nowrap dark:text-white uppercase">
-                RESFAB
+              <span className="text-xl pr-4 font-medium whitespace-nowrap dark:text-white uppercase p-4 mt-2">
+                Lung Link
               </span>
             )}
           </div>
