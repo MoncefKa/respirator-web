@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BsFillChatSquareDotsFill } from 'react-icons/bs';
+import { BiChat } from 'react-icons/bi';
 
 import styled from 'styled-components';
 
@@ -32,11 +32,11 @@ export default function Btn_support() {
       </button> */}
 
       <Button>
-        <BsFillChatSquareDotsFill
+        <BiChat
+        onClick={() => setShowModal(true)}
+        className="fill-black invert-x">
 
-          onClick={() => setShowModal(true)}>
-
-        </BsFillChatSquareDotsFill>
+        </BiChat>
       </Button>
 
       {showModal ? (

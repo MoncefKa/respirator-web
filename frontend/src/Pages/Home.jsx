@@ -13,7 +13,7 @@ const Home = () => {
             <div className="h-3/4 bg-hero bg-cover bg-center  bg-no-repeat bg-fixed" >
                 <nav className="flex items-center  justify-between flex-wrap p-2">
                     <div className="flex items-center flex-shrink-0 text-dark md:text-right mr-6">
-                        <a href="/"><img src={Logo} alt="" className=" w-14 h-14 rounded-full bg-[#82C3EC]" /></a>
+                        <a href="/"><img src={Logo} alt="" className=" w-14 h-14" /></a>
                         <span className="font-semibold text-xl tracking-tight hover:text-[#5CB8E4] captetalize pl-4"><a href="/"><span className="text-[#6D67E4]">Lung-</span>Link</a></span>
                     </div>
                     <div id="nav-content" className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0  md:text-right">

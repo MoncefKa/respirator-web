@@ -9,6 +9,9 @@ module.exports = {
         '128': '32rem',
         '144': '50rem',
       },
+      fontFamily: {
+        'custom': ['Orbitron', 'sans-serif'],
+    },
       backgroundImage: {
         'hero': "url('./assets/images/deepmind-kKYDdRoTydk-unsplash.jpg')",
       },
