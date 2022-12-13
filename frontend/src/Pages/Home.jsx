@@ -4,7 +4,6 @@ import Logo from "../assets/images/logo.png";
 import Fab from "../assets/images/FAB.jpg";
 import helloch from "../assets/images/Perons/halima.jpg";
 import donttrust from "../assets/images/Perons/donttrustme.jfif";
-import model from "../assets/images/Perons/model.jpeg";
 import mskhot from "../assets/images/Perons/mskhot.png";
 import mehdi from "../assets/images/patient1.jpeg";
 
@@ -105,7 +104,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col items-center pb-10">
-                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={model} alt="iwantmilf" />
+                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg"  alt="iwantmilf" />
                                 <h5 className="mb-1 text-xl font-medium text-gray-900 dark:gray-600 ">Oussama Boussaid</h5>
                                 <span className="text-sm text-gray-500 dark:text-gray-400">front end dev</span>
                                 <div className="flex mt-4 space-x-3 md:mt-6">
