@@ -3,6 +3,7 @@ import UnpublishedIcon from '@mui/icons-material/Unpublished';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Popup from "reactjs-popup";
 import VerifiedIcon from '@mui/icons-material/Verified';
+import clients from "../API/clients";
 
 function Activeapp() {
   const [check, setCheck] = useState(0);
@@ -10,22 +11,21 @@ function Activeapp() {
   const delay = ms => new Promise(
   resolve => setTimeout(resolve, ms)
 );
-
-  const addDevice=()=>{
-    setInputField([...inputField,{Device:""}])
-  }
-  const removeDevice=(index)=>{
-      const rows=[...inputField];
-      rows.splice(index, 1);
-      setInputField(rows);
-  }
-  const handleChange = (index, evnt)=>{
+  // const submitadding = () => {
+  //   console.log("submitting");
     
-    const { name, value } = evnt.target;
-    const list = [...inputField];
-    list[index][name] = value;
-    setInputField(list);
-  }
+  // };
+
+  // const [data, setData] = useState({
+  //   Ip: "",
+  //   Name: "",
+  // });
+  // const handleChangeTexte = (value, fieldname) => {
+  //   setData({ ...data, [fieldname]: value });
+  //   console.log(data);
+  // };
+
+  // const { Ip, Name } = data
   return (
     <div className="h-full dark:bg-slate-800 rounded-xl ">
       <div className="h-full block ">
@@ -37,9 +37,10 @@ function Activeapp() {
                 <h1 className="text-4xl text-slate-50 font-semibold capitalize">add device</h1>
               </div>
               {   check===0 ? (<div className="flex flex-col justify-center h-70 mt-14 items-center">
-                <input className="w-96 h-12 border-2 border-zinc-700 rounded-lg bg-white-500 text-center mb-10" type="text" placeholder="Ip appareille" />
+                <input className="w-96 h-12 border-2 border-zinc-700 rounded-lg bg-white-500 text-center mb-10" type="text" placeholder="Ip appareille"  />
                 <input className="w-96 h-12 border-2 border-zinc-700 rounded-lg bg-white-500 text-center text-neutral-800 " type="text" placeholder="Nom appareille" />
               <button className="mt-10 hover:bg-teal-900  w-40 h-9 rounded-2xl border-2 border-blue-500 text-blue-100" onClick={async ()=>{
+                // submitadding();
                 setCheck(1)
                 await delay(2000);
                 setCheck(0)
