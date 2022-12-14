@@ -40,6 +40,5 @@ http.createServer(function (req, res) {
     } else {
         console.log('GET /')
     }
-           
 
 }).listen(8080); //the server object listens on port 8080

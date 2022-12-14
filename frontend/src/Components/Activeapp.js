@@ -1,45 +1,18 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Popup from "reactjs-popup";
 import VerifiedIcon from '@mui/icons-material/Verified';
 import {RiRadioButtonLine} from 'react-icons/ri';
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer,Label } from 'recharts';
+import data from "./infoResp";
+import axios from "axios";
 
-  const data = [
-      {
-        name: 'Page A',
-        uv: 4000,
-
-      },
-      {
-        name: 'Page B',
-        uv: 3000,
-      },
-      {
-        name: 'Page C',
-        uv: 2000,
-      },
-      {
-        name: 'Page D',
-        uv: 2780,
-      },
-      {
-        name: 'Page E',
-        uv: 1890,
-      },
-      {
-        name: 'Page F',
-        uv: 2390,
-      },
-      {
-        name: 'Page G',
-        uv: 3490,
-      },
-    ];
 function Activeapp() {
   const [check, setCheck] = useState(0);
   const [message, setMessage] = useState('');
   const [updated, setUpdated] = useState(message);
+  const [data, setDatas] = useState([]);
+
   const handleChange = (event) => {
     setMessage(event.target.value);
   };
@@ -50,7 +23,15 @@ function Activeapp() {
   const delay = ms => new Promise(
     resolve => setTimeout(resolve, ms)
   );
-  
+  useEffect(() => {
+    const fetchDatas = async () => {
+      const res = await fetch("../../../backend/API/data.json");
+      const data = await res.json();
+      console.log(data);
+      setDatas(data?.data);
+    };
+    fetchDatas();
+  }, []);
   return (
     <div className="h-full dark:bg-slate-800 rounded-xl ">
       <div className="h-full block ">
@@ -106,12 +87,12 @@ function Activeapp() {
                             left: 10,
                             bottom: 15,
                           }}>
-                          <Label value="Pressure" offset={0} position="insideBottom" />
-                          <XAxis dataKey="name" />
+                          
+                          <XAxis dataKey="" />
                           <YAxis />
                           <Tooltip />
                           <Legend />
-                          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                          <Line type="monotone" dataKey="Presure" stroke="#82ca9d" />
                         </LineChart>
                       </ResponsiveContainer>
                     </div>
@@ -127,11 +108,11 @@ function Activeapp() {
                             left: 10,
                             bottom: 15,
                           }}>
-                          <XAxis dataKey="name" />
+                          <XAxis dataKey="Temperture" />
                           <YAxis />
                           <Tooltip />
                           <Legend />
-                          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                          <Line type="monotone" dataKey="Temperture" stroke="#82ca9d" />
                         </LineChart>
                       </ResponsiveContainer>
                     </div>
