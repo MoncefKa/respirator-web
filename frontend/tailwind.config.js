@@ -14,6 +14,8 @@ module.exports = {
     },
       backgroundImage: {
         'hero': "url('./assets/images/deepmind-kKYDdRoTydk-unsplash.jpg')",
+        'login': "url('./assets/images/l1.jpg')",
+
       },
     },
   },

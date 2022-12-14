@@ -1,4 +1,16 @@
 const  ID  = require("../models/ID");
+const  Device  = require("../models/Device");
+
+exports.createDevice = async (req, res) => {
+    const { number, Name } = req.body;
+    const newDevice = await Device.isDeviceinUse(number);
+    if (newDevice) {
+        const device = await Device({ number, Name });
+        await device.save();
+        return res.status(200).json({ message: "Device created" , number: number, Name: Name});
+    }
+    res.status(400).json({ message: "Device already exists" });
+};
 
 exports.createID = async (req, res) => {
     const { idd } = req.body;
