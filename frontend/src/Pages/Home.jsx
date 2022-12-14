@@ -5,7 +5,10 @@ import Fab from "../assets/images/FAB.jpg";
 import helloch from "../assets/images/Perons/halima.jpg";
 import donttrust from "../assets/images/Perons/donttrustme.jfif";
 import mskhot from "../assets/images/Perons/mskhot.png";
+import model from "../assets/images/Perons/model.jpeg";
 import mehdi from "../assets/images/patient1.jpeg";
+import oum from "../assets/images/Perons/oum.jpg";
+
 
 
 const Home = () => {
@@ -15,8 +18,8 @@ const Home = () => {
             <div className="h-3/4 bg-hero bg-cover bg-center  bg-no-repeat bg-fixed" >
                 <nav className="flex items-center  justify-between flex-wrap p-2">
                     <div className="flex items-center flex-shrink-0 text-dark md:text-right mr-6">
-                        <a href="/"><img src={Logo} alt="" className=" w-14 h-14 rounded-full bg-[#82C3EC]" /></a>
-                        <span className="font-semibold text-xl tracking-tight hover:text-[#5CB8E4] captetalize pl-4"><a href="/"><span className="text-[#1988cd]">Lung-</span>Link</a></span>
+                        <a href="/"><img src={Logo} alt="" className=" w-20 h-20 rounded-full " /></a>
+                        <span className="font-semibold text-xl tracking-tight hover:text-[#5CB8E4] captetalize pl-2"><a href="/"><span className="text-[#1988cd]">Lung-</span>Link</a></span>
                     </div>
                     <div id="nav-content" className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0  md:text-right">
                         <div className="text-xm lg:flex-grow">
@@ -82,7 +85,18 @@ const Home = () => {
                             <div className="flex flex-col items-center pb-10">
                                 <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={donttrust} alt="dont" />
                                 <h5 className="mb-1 text-xl font-medium text-gray-900 dark:gray-600">Karam Belmoujoud</h5>
-                                <span className="text-sm text-gray-500 dark:text-gray-400">front end dev</span>
+                                <span className="text-sm text-gray-500 dark:text-gray-400">front-end dev</span>
+                                <div className="flex mt-4 space-x-3 md:mt-6">
+                                </div>
+                            </div>
+                        </div>
+                        <div className="w-full max-w-sm rounded-lg ">
+                            <div className="flex justify-end px-4 pt-4">
+                            </div>
+                            <div className="flex flex-col items-center pb-10">
+                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={oum} alt="dont" />
+                                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:gray-600">Oumaima chttane </h5>
+                                <span className="text-sm text-gray-500 dark:text-gray-400">front-end dev</span>
                                 <div className="flex mt-4 space-x-3 md:mt-6">
                                 </div>
                             </div>
@@ -104,9 +118,9 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col items-center pb-10">
-                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg"  alt="iwantmilf" />
+                                <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={model} alt="iwantmilf" />
                                 <h5 className="mb-1 text-xl font-medium text-gray-900 dark:gray-600 ">Oussama Boussaid</h5>
-                                <span className="text-sm text-gray-500 dark:text-gray-400">front end dev</span>
+                                <span className="text-sm text-gray-500 dark:text-gray-400">Junior Data Scientist </span>
                                 <div className="flex mt-4 space-x-3 md:mt-6">
                                 </div>
                             </div>
