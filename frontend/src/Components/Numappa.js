@@ -8,7 +8,7 @@ function Numappa() {
             Connected Devices
         </h1>
         <h1 className="text-[#EFF5F5] text-2xl font-bold font-custom tracking-wider">
-            0 5
+            0 1
         </h1>
     </div>
 </div>

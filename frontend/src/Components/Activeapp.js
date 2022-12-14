@@ -1,9 +1,41 @@
 import React, { useState } from "react";
-import UnpublishedIcon from '@mui/icons-material/Unpublished';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Popup from "reactjs-popup";
 import VerifiedIcon from '@mui/icons-material/Verified';
+import {RiRadioButtonLine} from 'react-icons/ri';
+import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer,Label } from 'recharts';
 
+  const data = [
+      {
+        name: 'Page A',
+        uv: 4000,
+
+      },
+      {
+        name: 'Page B',
+        uv: 3000,
+      },
+      {
+        name: 'Page C',
+        uv: 2000,
+      },
+      {
+        name: 'Page D',
+        uv: 2780,
+      },
+      {
+        name: 'Page E',
+        uv: 1890,
+      },
+      {
+        name: 'Page F',
+        uv: 2390,
+      },
+      {
+        name: 'Page G',
+        uv: 3490,
+      },
+    ];
 function Activeapp() {
   const [check, setCheck] = useState(0);
   const [message, setMessage] = useState('');
@@ -18,14 +50,14 @@ function Activeapp() {
   const delay = ms => new Promise(
     resolve => setTimeout(resolve, ms)
   );
-
+  
   return (
     <div className="h-full dark:bg-slate-800 rounded-xl ">
       <div className="h-full block ">
         <div className="flex flex-row justify-between mx-3">
           <h1 className="text-[#f5efef] text-3xl p-8 pb-12 uppercase">Active Devices</h1>
           <Popup trigger={<button className="mr-10 text-cyan-300 font-bold capitalize">add device</button>} modal>
-            <div className="dark:bg-slate-900	h-128 w-144 border-2 border-zinc-500">
+            <div className="dark:bg-slate-900	h-110 w-120 border-2 border-zinc-500">
               <div className="w-full text-center mt-8">
                 <h1 className="text-4xl text-slate-50 font-semibold capitalize">add device</h1>
               </div>
@@ -57,18 +89,55 @@ function Activeapp() {
                 Device 01
               </h1>
               <Popup trigger={<button><CheckCircleIcon /></button>} modal>
-                <div className="dark:bg-slate-900	h-128 w-144 border-2 border-zinc-500">
+                <div className="dark:bg-slate-900	h-128 w-144 rounded-xl order-2 border-zinc-500">
                   <div className="w-full text-center mt-8">
-                    <h1 className="text-4xl text-slate-50 font-semibold capitalize">Device Stats</h1>
+                    <h1 className="text-4xl text-white p-4">Device Data Charts</h1>
                   </div>
-
+                  <div className="h-full p-4 grid grid-cols-2 grid-rows-4 flex items-center">
+                  <div className="h-full mt-12 col-span-1 row-span-4">
+                    <ResponsiveContainer width="99%" height="85%" className="bg-[#EEEEEE] rounded-xl">
+                        <LineChart
+                          width={500}
+                          height={200}
+                          data={data}
+                          margin={{
+                            top: 25,
+                            right: 10,
+                            left: 10,
+                            bottom: 15,
+                          }}>
+                          <Label value="Pressure" offset={0} position="insideBottom" />
+                          <XAxis dataKey="name" />
+                          <YAxis />
+                          <Tooltip />
+                          <Legend />
+                          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                        </LineChart>
+                      </ResponsiveContainer>
+                    </div>
+                    <div className="h-full mt-12 col-span-1 row-span-4">
+                    <ResponsiveContainer width="99%" height="85%" className="bg-[#EEEEEE] rounded-xl">
+                        <LineChart
+                          width={500}
+                          height={200}
+                          data={data}
+                          margin={{
+                            top: 25,
+                            right: 10,
+                            left: 10,
+                            bottom: 15,
+                          }}>
+                          <XAxis dataKey="name" />
+                          <YAxis />
+                          <Tooltip />
+                          <Legend />
+                          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                        </LineChart>
+                      </ResponsiveContainer>
+                    </div>
+                  </div>
                 </div>
               </Popup>
-            </div>
-            <div className="w-5/6 mx-auto p-2">
-              <h1 className="text-4xl text-white bg-[#82C3EC] p-2 rounded-xl">
-                {updated}
-              </h1>
             </div>
           </div>
         </div>
