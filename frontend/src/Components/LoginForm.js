@@ -6,7 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 function Loginform() {
   return (
-    <div className="flex flex-wrap justify-center ">
+    <div className="flex flex-wrap justify-center  overflow-hidden ">
       <div className="w-6/12 h-screen px-20  ">
         <div className="p-16 mx-10 ">
           <div className="  flex justify-center drop-shadow-xl">
@@ -40,7 +40,7 @@ function Loginform() {
 
             <div>
               <button
-                className=" text-center rounded-full transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:drop-shadow-xl  bg-gradient-to-r from-[#81C6E8] via-[#39A2DB]  to-[#81C6E8]  inline-block px-6 py-2.5 text-[#FFFFFF] font-semibold text-xs leading-tight   ease-in-out w-full  mt-2"
+                className=" text-center rounded-full transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:drop-shadow-xl  bg-gradient-to-r from-[#81C6E8] via-[#0195db]  to-[#81C6E8]  inline-block px-6 py-2.5 text-[#FFFFFF] font-semibold text-xs leading-tight   ease-in-out w-full  mt-2"
                 type="submit"
               >
                 Submit
@@ -59,6 +59,20 @@ function Loginform() {
               </a>
             </div>
           </form>
+        </div>
+      </div>
+      <div className="bg-login bg-cover bg-center  bg-no-repeat bg-fixed  w-6/12 h-6/12  py-40 px-10   ">
+        <div className="text-[#FFFFFF] px-4 py-6 md:p-20 md:mx-6">
+          <div className="text-center">
+            <h4 className="text-8xl  font-semibold mt-1 mb-10 text-[#d6e8ec]">Sign <span className="text-[#0193cf]">In</span></h4>
+            <h4 className="text-3xl font-semibold mb-6 text-white">
+              it's more than just a respirator
+            </h4>
+            <p className="text-sm capitalize">
+              access your dashboard to view patiets and their data <br/> to manage your account settings and preferences. 
+              
+            </p>
+          </div>
         </div>
       </div>
     </div>
