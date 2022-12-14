@@ -66,13 +66,13 @@ const Sidebar = () => {
             ))}
           </ul>
         </div>
-        <div class="relative">
+        <div className="relative">
         <img
           className="w-12 h-12 ml-2 -my-28 rounded-full"
           src={mehdi}
           alt="mehdi"
         />
-        <span class="bottom-0 left-10 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+        <span className="bottom-0 left-10 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
       </div>
       </div>
     </div>
