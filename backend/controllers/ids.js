@@ -27,9 +27,11 @@ exports.createID = async (req, res) => {
 
 exports.signin = async (req, res) => {
     const { idd } = req.body;
+    console.log(idd);
     const newID = await ID.isIDinUse(idd);
     if (newID) {
-        return res.status(400).json({ message: "ID does not exist" });
+        return res.status(400).json({ message: "ID does not exist", success: false });
     }
-    res.status(200).json({ message: "ID exists" });
+    res.status(200).json({ message: "ID exists", success: true });
+    res.redirect('/');
 };

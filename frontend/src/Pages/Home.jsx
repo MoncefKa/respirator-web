@@ -35,7 +35,7 @@ const Home = () => {
                     <div className=" h-screen  " >
                         <div className="container p-64 text-center mx-auto  opacity-100">
                             <h2 className="text-4xl font-bold mb-2 text-white uppercase">Lung Link</h2>
-                            <h3 className="text-2xl mb-8 text-gray-200 capitalize">Save your lungs, Save your life before its to late</h3>
+                            <h3 className="text-2xl mb-8 text-gray-200 capitalize">Save your lungs, Save your life before its too late</h3>
                             <Link to="/Login">
                                 <button className="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider hover:border-transparent hover:text-white hover:bg-[#1988cd] transition-all">access your dashboard </button>
                             </Link>
