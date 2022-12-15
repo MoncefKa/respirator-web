@@ -1,14 +1,19 @@
-import React, { useState } from "react";
-import UnpublishedIcon from '@mui/icons-material/Unpublished';
+import React, { useState,useEffect } from "react";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Popup from "reactjs-popup";
 import VerifiedIcon from '@mui/icons-material/Verified';
+import {RiRadioButtonLine} from 'react-icons/ri';
+import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer,Label } from 'recharts';
+import data from "./infoResp";
+import axios from "axios";
 import clients from "../API/clients";
 
 function Activeapp() {
   const [check, setCheck] = useState(0);
   const [message, setMessage] = useState('');
   const [updated, setUpdated] = useState(message);
+  const [data, setDatas] = useState([]);
+
   const [number, setNumber] = useState(1);
   const [devices, setDevices] = useState([]);
   const handleChange = (event) => {
@@ -19,8 +24,19 @@ function Activeapp() {
     setUpdated(message);
   };
   const delay = ms => new Promise(
-  resolve => setTimeout(resolve, ms)
-);
+    resolve => setTimeout(resolve, ms)
+  );
+  useEffect(() => {
+    const fetchDatas = async () => {
+      const res = await fetch("../../../backend/API/data.json");
+      const data = await res.json();
+      console.log(data);
+      setDatas(data?.data);
+    };
+    fetchDatas();
+  }, []);
+
+
   // const submitadding = () => {
   //   console.log("submitting");
     
@@ -42,7 +58,7 @@ function Activeapp() {
         <div className="flex flex-row justify-between mx-3">
           <h1 className="text-[#f5efef] text-3xl p-8 pb-12 uppercase">Active Devices</h1>
           <Popup trigger={<button className="mr-10 text-cyan-300 font-bold capitalize">add device</button>} modal>
-            <div className="dark:bg-slate-900	h-128 w-144 border-2 border-zinc-500">
+            <div className="dark:bg-slate-900	h-110 w-120 border-2 border-zinc-500">
               <div className="w-full text-center mt-8">
                 <h1 className="text-4xl text-slate-50 font-semibold capitalize">add device</h1>
               </div>
@@ -85,11 +101,53 @@ function Activeapp() {
                 Device 01
               </h1>
               <Popup trigger={<button><CheckCircleIcon /></button>} modal>
-                <div className="dark:bg-slate-900	h-128 w-144 border-2 border-zinc-500">
+                <div className="dark:bg-slate-900	h-128 w-144 rounded-xl order-2 border-zinc-500">
                   <div className="w-full text-center mt-8">
-                    <h1 className="text-4xl text-slate-50 font-semibold capitalize">Device Stats</h1>
+                    <h1 className="text-4xl text-white p-4">Device Data Charts</h1>
                   </div>
-
+                  <div className="h-full p-4 grid grid-cols-2 grid-rows-4 flex items-center">
+                  <div className="h-full mt-12 col-span-1 row-span-4">
+                    <ResponsiveContainer width="99%" height="85%" className="bg-[#EEEEEE] rounded-xl">
+                        <LineChart
+                          width={500}
+                          height={200}
+                          data={data}
+                          margin={{
+                            top: 25,
+                            right: 10,
+                            left: 10,
+                            bottom: 15,
+                          }}>
+                          
+                          <XAxis dataKey="" />
+                          <YAxis />
+                          <Tooltip />
+                          <Legend />
+                          <Line type="monotone" dataKey="Presure" stroke="#82ca9d" />
+                        </LineChart>
+                      </ResponsiveContainer>
+                    </div>
+                    <div className="h-full mt-12 col-span-1 row-span-4">
+                    <ResponsiveContainer width="99%" height="85%" className="bg-[#EEEEEE] rounded-xl">
+                        <LineChart
+                          width={500}
+                          height={200}
+                          data={data}
+                          margin={{
+                            top: 25,
+                            right: 10,
+                            left: 10,
+                            bottom: 15,
+                          }}>
+                          <XAxis dataKey="Temperture" />
+                          <YAxis />
+                          <Tooltip />
+                          <Legend />
+                          <Line type="monotone" dataKey="Temperture" stroke="#82ca9d" />
+                        </LineChart>
+                      </ResponsiveContainer>
+                    </div>
+                  </div>
                 </div>
               </Popup>
             </div>

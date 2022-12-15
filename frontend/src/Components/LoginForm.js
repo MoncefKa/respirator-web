@@ -41,11 +41,11 @@ function Loginform() {
               <img
                 src={Logo}
                 alt="Company Logo"
-                className=" h-40 w-40 cursor-pointer "
+                classNameName=" h-40 w-40 cursor-pointer "
               />
             </a>
           </div>
-          <div className="mb-5 text-xl mt-2  font-semibold flex justify-center ">
+          <div classNameName="mb-5 text-xl mt-2  font-semibold flex justify-center ">
             <p>Sign In</p>
           </div>
           <form>

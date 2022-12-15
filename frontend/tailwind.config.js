@@ -6,8 +6,10 @@ module.exports = {
     extend: {
       spacing: {
         '90': "20rem",
-        '128': '32rem',
-        '144': '50rem',
+        '128': '45rem',
+        '144': '95rem',
+        '120':"50rem",
+        '110':"35rem"
       },
       fontFamily: {
         'custom': ['Orbitron', 'sans-serif'],
